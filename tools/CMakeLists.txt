@@ -69,15 +69,15 @@ endif()
 if (SDBUSCPP_INSTALL)
     install(TARGETS sdbus-c++-xml2cpp
             EXPORT sdbus-c++-tools-targets
-            DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT sdbus-c++-dev)
+            DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT dev)
     install(EXPORT sdbus-c++-tools-targets
             DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/sdbus-c++-tools
             NAMESPACE SDBusCpp::
-            COMPONENT sdbus-c++-dev)
+            COMPONENT dev)
     install(FILES ${CMAKE_CURRENT_BINARY_DIR}/cmake/sdbus-c++-tools-config.cmake
             ${CMAKE_CURRENT_BINARY_DIR}/cmake/sdbus-c++-tools-config-version.cmake
             DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/sdbus-c++-tools
-            COMPONENT sdbus-c++-dev)
+            COMPONENT dev)
     install(FILES ${CMAKE_CURRENT_BINARY_DIR}/pkgconfig/sdbus-c++-tools.pc
-            DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig COMPONENT sdbus-c++-dev)
+            DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig COMPONENT dev)
 endif()
